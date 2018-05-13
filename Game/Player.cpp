@@ -1,23 +1,28 @@
-#include<rect.h>
+#include<Player.h>
 #include<QDebug>
 #include<QKeyEvent>
 #include<bullet.h>
 #include<QGraphicsScene>
+#include<enemy.h>
 
-void PlayerRect::keyPressEvent(QKeyEvent *event)
+void Player::keyPressEvent(QKeyEvent *event)
 {
     //qDebug()<<"You pressed the key";
     if(event->key()==Qt::Key_Left){
-        setPos(x()-40,y());
+        if(pos().x()> 10)
+        setPos(x()-10,y());
     }
     if(event->key()==Qt::Key_Right){
-        setPos(x()+40,y());
+        if(pos().x()+10<550)
+        setPos(x()+10,y());
     }
     if(event->key()==Qt::Key_Up){
-        setPos(x(),y()-50);
+        if(pos().y()>10)
+        setPos(x(),y()-10);
     }
     if(event->key()==Qt::Key_Down){
-        setPos(x(),y()+50);
+        if(pos().y()< 1140)
+        setPos(x(),y()+10);
     }
 
     if(event->key()==Qt::Key_Space){
@@ -27,4 +32,10 @@ void PlayerRect::keyPressEvent(QKeyEvent *event)
 
     }
 
+}
+
+void Player::spawn()
+{
+    Enemy* killer=new Enemy();
+    scene()->addItem(killer);
 };
