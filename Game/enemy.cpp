@@ -1,8 +1,12 @@
 #include "enemy.h"
-
 #include<QTimer>
 #include<QList>
 #include<stdlib.h>
+#include<QGraphicsScene>
+#include<game.h>
+
+
+extern Game* game;
 
 Enemy::Enemy()
 {
@@ -20,9 +24,12 @@ Enemy::Enemy()
 
 void Enemy::move()
 {
-    setPos(x(),y()+5);
+    setPos(x(),y()+7);
 
-    if(pos().y()+rect().height() < 0){
+    if(pos().y() > 1200){
+
+        game->health1->decrease();
+
         scene()->removeItem(this);
         delete this;
     }

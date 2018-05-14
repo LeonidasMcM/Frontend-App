@@ -7,6 +7,9 @@
 
 void Player::keyPressEvent(QKeyEvent *event)
 {
+    QMediaPlayer* bulletsound= new QMediaPlayer();
+    bulletsound->setMedia(QUrl("qrc:/sounds/laser.wav"));
+
     //qDebug()<<"You pressed the key";
     if(event->key()==Qt::Key_Left){
         if(pos().x()> 10)
@@ -30,6 +33,11 @@ void Player::keyPressEvent(QKeyEvent *event)
         bullet->setPos(x(),y());
         scene()->addItem(bullet);
 
+        if (bulletsound->state()==QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else
+            bulletsound->play();
     }
 
 }

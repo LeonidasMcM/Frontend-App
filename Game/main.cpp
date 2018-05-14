@@ -3,10 +3,6 @@
 #include<game.h>
 
 
-#include<QGraphicsScene>
-#include<QGraphicsView>
-#include<Player.h>
-#include<QTimer>
 
 Game* game;
 

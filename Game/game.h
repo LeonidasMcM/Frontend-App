@@ -5,8 +5,8 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include "Player.h"
-//#include "Score.h"
-//#include "Health.h"
+#include "score.h"
+#include "health.h"
 
 class Game: public QGraphicsView{
 public:
@@ -14,8 +14,8 @@ public:
 
     QGraphicsScene * scene;
     Player * player;
-    //Score * score;
-    //Health * health;
+    score * score1;
+    health * health1;
 
 };
 

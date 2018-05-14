@@ -6,6 +6,7 @@
 #include <QGraphicsTextItem>
 #include <QFont>
 #include "Enemy.h"
+#include<QMediaPlayer>
 
 Game::Game(QWidget *parent){
     // create the scene
@@ -30,16 +31,25 @@ Game::Game(QWidget *parent){
     scene->addItem(player);
     //
     // create the score/health
-    //score = new Score();
-    //scene->addItem(score);
-    //health = new Health();
-    //health->setPos(health->x(),health->y()+25);
-    //scene->addItem(health);
+    score1 = new score();
+    score1->setPos(x()-200,y());
+    scene->addItem(score1);
+
+
+    health1 = new health();
+    health1->setPos(health1->x()-200,health1->y()+50);
+    scene->addItem(health1);
 
     // spawn enemies
     QTimer * enemytimer = new QTimer();
     QObject::connect(enemytimer,SIGNAL(timeout()),player,SLOT(spawn()));
     enemytimer->start(2000);
+
+    // play music
+    QMediaPlayer* music= new QMediaPlayer();
+    music->setMedia(QUrl("qrc:/sounds/bmg.mp3"));
+    music->play();
+
 
     show();
 }
