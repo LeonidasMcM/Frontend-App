@@ -27,7 +27,7 @@ Game::Game(QWidget *parent){
     // create the player
     Player * player=new Player();
     player->setPixmap(QPixmap(":/images/player.png").scaled(100, 100, Qt::IgnoreAspectRatio, Qt::FastTransformation)); // change the rect from 0x0 (default) to 100x100 pixels
-   player->setPos(275,1140); // TODO generalize to always be in the middle bottom of screen
+   player->setPos(275,1100); // TODO generalize to always be in the middle bottom of screen
     // make the player focusable and set it to be the current focus
     player->setFlag(QGraphicsItem::ItemIsFocusable);
     player->setFocus();
@@ -47,7 +47,7 @@ Game::Game(QWidget *parent){
     // spawn enemies
     QTimer * enemytimer = new QTimer();
     QObject::connect(enemytimer,SIGNAL(timeout()),player,SLOT(spawn()));
-    enemytimer->start(2000);
+    enemytimer->start(1000);
 
     // play music
     QMediaPlayer* music= new QMediaPlayer();

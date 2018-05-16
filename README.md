@@ -7,6 +7,12 @@ At the current time the game is intialized with sounds,graphics, and working mec
 - We want to add better functionality to button presses and other adjustments to make the program smooth and more graphically enhanced
 - so far it looks pretty good :)
 
+Update!
+after doing more research it has come to my attention that a smoothing of the controls is not possible the way the game has been developed thusfar.
+this is disappointing but a nessecary hurdle in new development.
+I may try to remake this game in unity to help streamline it somewhat.
+- this version is unworking but serves as a great lesson 
+
 
 Assignment 1:
 Calculator app is finished and can be found in repository
