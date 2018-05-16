@@ -30,7 +30,7 @@ void Player::keyPressEvent(QKeyEvent *event)
 
     if(event->key()==Qt::Key_Space){
         Bullet*bullet=new Bullet();
-        bullet->setPos(x(),y());
+        bullet->setPos(x()+45,y()-30);
         scene()->addItem(bullet);
 
         if (bulletsound->state()==QMediaPlayer::PlayingState){

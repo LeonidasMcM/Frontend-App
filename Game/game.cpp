@@ -7,11 +7,15 @@
 #include <QFont>
 #include "Enemy.h"
 #include<QMediaPlayer>
+#include<QBrush>
+#include<QImage>
 
 Game::Game(QWidget *parent){
     // create the scene
     scene = new QGraphicsScene();
-    scene->setSceneRect(1,1,600,1200);
+    scene->setSceneRect(200,1,600,1200);
+
+    setBackgroundBrush(QBrush(QImage(":/images/bg.jpg").scaled(1000, 1200, Qt::IgnoreAspectRatio, Qt::FastTransformation)));
 
     // make the newly created scene the scene to visualize (since Game is a QGraphicsView Widget,
     // it can be used to visualize scenes)
@@ -22,7 +26,7 @@ Game::Game(QWidget *parent){
 
     // create the player
     Player * player=new Player();
-    player->setRect(0,0,50,50); // change the rect from 0x0 (default) to 100x100 pixels
+    player->setPixmap(QPixmap(":/images/player.png").scaled(100, 100, Qt::IgnoreAspectRatio, Qt::FastTransformation)); // change the rect from 0x0 (default) to 100x100 pixels
    player->setPos(275,1140); // TODO generalize to always be in the middle bottom of screen
     // make the player focusable and set it to be the current focus
     player->setFlag(QGraphicsItem::ItemIsFocusable);
@@ -32,12 +36,12 @@ Game::Game(QWidget *parent){
     //
     // create the score/health
     score1 = new score();
-    score1->setPos(x()-200,y());
+    score1->setPos(x()+600,y());
     scene->addItem(score1);
 
 
     health1 = new health();
-    health1->setPos(health1->x()-200,health1->y()+50);
+    health1->setPos(health1->x()+600,health1->y()+50);
     scene->addItem(health1);
 
     // spawn enemies

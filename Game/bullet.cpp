@@ -9,7 +9,9 @@ extern Game* game;
 
 Bullet::Bullet()
 {
-   setRect(20,-50,10,50);
+   //setRect(20,-50,10,50);
+
+   setPixmap(QPixmap(":/images/laser.png").scaled(10, 30, Qt::IgnoreAspectRatio, Qt::FastTransformation));
 
    QTimer*timer=new QTimer();
    connect(timer,SIGNAL(timeout()),this,SLOT(move()));
@@ -40,7 +42,7 @@ void Bullet::move()
 
     setPos(x(),y()-50);
 
-    if(pos().y()+rect().height() < 0){
+    if(pos().y() < -1200){
         scene()->removeItem(this);
         delete this;
     }

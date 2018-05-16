@@ -6,7 +6,8 @@
     <qresource prefix="/images">
         <file>bg.jpg</file>
         <file>enemy.png</file>
-        <file>laser.jpg</file>
         <file>player.png</file>
+        <file>health.h</file>
+        <file>laser.png</file>
     </qresource>
 </RCC>
