@@ -20,8 +20,6 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QScrollArea>
-#include <QtWidgets/QScrollBar>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -33,92 +31,204 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QLabel *Header;
-    QScrollArea *Assignment_Scroller;
-    QWidget *Assignmentscroller;
-    QScrollBar *verticalScrollBar;
-    QScrollArea *Midterm_Scroller;
-    QWidget *Midtermscroller;
-    QScrollBar *ScrollbarMidterm;
-    QLabel *label_2;
-    QLabel *label;
-    QWidget *widget;
-    QGridLayout *gridLayout_3;
-    QLabel *Finallabel;
-    QLabel *Finalweightlabel;
-    QLineEdit *line_weightFinal;
-    QLabel *Finalscorelabel;
-    QLineEdit *line_gradescore;
-    QPushButton *calculate;
-    QWidget *widget1;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *OverallFinallabel;
     QLabel *Outputlabel;
-    QWidget *widget2;
+    QWidget *layoutWidget1;
     QGridLayout *gridLayout;
+    QLabel *Midtermnumlabel;
     QLabel *Midtermlabel;
     QSpinBox *Midtermspinbox;
-    QLineEdit *line_weightMidterms;
     QLabel *MidtermWeightlabel;
-    QLabel *Midtermnumlabel;
     QPushButton *finalizemidterms;
-    QWidget *widget3;
+    QLabel *label_4;
+    QLineEdit *lineEdit_3;
+    QWidget *layoutWidget2;
     QGridLayout *gridLayout_2;
-    QLabel *AssignmentLabel;
+    QPushButton *finalizeassignments;
     QLabel *Assignemtnumlabel;
     QSpinBox *Assignmentspinbox;
+    QLabel *AssignmentLabel;
     QLabel *Assignmentweightlabel;
-    QLineEdit *line_weightassignments;
-    QPushButton *finalizemidterms_2;
+    QLabel *label_3;
+    QLineEdit *lineEdit_2;
+    QWidget *widget;
+    QGridLayout *gridLayout_3;
+    QLabel *label_5;
+    QLabel *Finalscorelabel;
+    QLabel *Finallabel;
+    QLabel *Finalweightlabel;
+    QLineEdit *line_gradescore;
+    QPushButton *calculate;
+    QLineEdit *lineEdit;
+    QWidget *widget1;
+    QGridLayout *gridLayout_4;
+    QLabel *label_15;
+    QLabel *label;
+    QLineEdit *lineEdit_5;
+    QLabel *label_13;
+    QLabel *label_12;
+    QLineEdit *lineEdit_6;
+    QLineEdit *lineEdit_7;
+    QWidget *widget2;
+    QGridLayout *gridLayout_6;
+    QLabel *label_2;
+    QGridLayout *gridLayout_5;
+    QLabel *label_6;
+    QLineEdit *lineEdit_4;
+    QLabel *label_7;
+    QLineEdit *lineEdit_8;
+    QLabel *label_8;
+    QLineEdit *lineEdit_9;
+    QLabel *label_10;
+    QLineEdit *lineEdit_10;
+    QLineEdit *lineEdit_11;
+    QLabel *label_11;
+    QLineEdit *lineEdit_13;
+    QLabel *label_9;
+    QLineEdit *lineEdit_12;
+    QLineEdit *lineEdit_14;
+    QLineEdit *lineEdit_15;
+    QLineEdit *lineEdit_16;
+    QLabel *label_16;
+    QLabel *label_14;
+    QLabel *label_17;
+    QLabel *label_18;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(736, 634);
+        MainWindow->resize(738, 680);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         Header = new QLabel(centralWidget);
         Header->setObjectName(QStringLiteral("Header"));
         Header->setGeometry(QRect(0, 0, 271, 71));
-        Assignment_Scroller = new QScrollArea(centralWidget);
-        Assignment_Scroller->setObjectName(QStringLiteral("Assignment_Scroller"));
-        Assignment_Scroller->setGeometry(QRect(10, 260, 221, 351));
-        Assignment_Scroller->setWidgetResizable(true);
-        Assignmentscroller = new QWidget();
-        Assignmentscroller->setObjectName(QStringLiteral("Assignmentscroller"));
-        Assignmentscroller->setGeometry(QRect(0, 0, 219, 349));
-        verticalScrollBar = new QScrollBar(Assignmentscroller);
-        verticalScrollBar->setObjectName(QStringLiteral("verticalScrollBar"));
-        verticalScrollBar->setGeometry(QRect(200, 0, 16, 351));
-        verticalScrollBar->setOrientation(Qt::Vertical);
-        Assignment_Scroller->setWidget(Assignmentscroller);
-        Midterm_Scroller = new QScrollArea(centralWidget);
-        Midterm_Scroller->setObjectName(QStringLiteral("Midterm_Scroller"));
-        Midterm_Scroller->setGeometry(QRect(240, 260, 201, 351));
-        Midterm_Scroller->setWidgetResizable(true);
-        Midtermscroller = new QWidget();
-        Midtermscroller->setObjectName(QStringLiteral("Midtermscroller"));
-        Midtermscroller->setGeometry(QRect(0, 0, 199, 349));
-        ScrollbarMidterm = new QScrollBar(Midtermscroller);
-        ScrollbarMidterm->setObjectName(QStringLiteral("ScrollbarMidterm"));
-        ScrollbarMidterm->setGeometry(QRect(180, 0, 16, 351));
-        ScrollbarMidterm->setOrientation(Qt::Vertical);
-        Midterm_Scroller->setWidget(Midtermscroller);
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(0, 240, 141, 31));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(240, 240, 91, 31));
+        layoutWidget = new QWidget(centralWidget);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(320, 0, 401, 71));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        OverallFinallabel = new QLabel(layoutWidget);
+        OverallFinallabel->setObjectName(QStringLiteral("OverallFinallabel"));
+
+        horizontalLayout->addWidget(OverallFinallabel);
+
+        Outputlabel = new QLabel(layoutWidget);
+        Outputlabel->setObjectName(QStringLiteral("Outputlabel"));
+
+        horizontalLayout->addWidget(Outputlabel);
+
+        layoutWidget1 = new QWidget(centralWidget);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(360, 70, 371, 171));
+        gridLayout = new QGridLayout(layoutWidget1);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        Midtermnumlabel = new QLabel(layoutWidget1);
+        Midtermnumlabel->setObjectName(QStringLiteral("Midtermnumlabel"));
+
+        gridLayout->addWidget(Midtermnumlabel, 1, 0, 1, 1);
+
+        Midtermlabel = new QLabel(layoutWidget1);
+        Midtermlabel->setObjectName(QStringLiteral("Midtermlabel"));
+
+        gridLayout->addWidget(Midtermlabel, 0, 0, 1, 1);
+
+        Midtermspinbox = new QSpinBox(layoutWidget1);
+        Midtermspinbox->setObjectName(QStringLiteral("Midtermspinbox"));
+
+        gridLayout->addWidget(Midtermspinbox, 1, 1, 2, 1);
+
+        MidtermWeightlabel = new QLabel(layoutWidget1);
+        MidtermWeightlabel->setObjectName(QStringLiteral("MidtermWeightlabel"));
+
+        gridLayout->addWidget(MidtermWeightlabel, 3, 0, 1, 2);
+
+        finalizemidterms = new QPushButton(layoutWidget1);
+        finalizemidterms->setObjectName(QStringLiteral("finalizemidterms"));
+
+        gridLayout->addWidget(finalizemidterms, 2, 0, 1, 1);
+
+        label_4 = new QLabel(layoutWidget1);
+        label_4->setObjectName(QStringLiteral("label_4"));
+
+        gridLayout->addWidget(label_4, 4, 1, 1, 1);
+
+        lineEdit_3 = new QLineEdit(layoutWidget1);
+        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+
+        gridLayout->addWidget(lineEdit_3, 4, 0, 1, 1);
+
+        layoutWidget2 = new QWidget(centralWidget);
+        layoutWidget2->setObjectName(QStringLiteral("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(0, 70, 341, 171));
+        gridLayout_2 = new QGridLayout(layoutWidget2);
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setContentsMargins(11, 11, 11, 11);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        gridLayout_2->setContentsMargins(0, 0, 0, 0);
+        finalizeassignments = new QPushButton(layoutWidget2);
+        finalizeassignments->setObjectName(QStringLiteral("finalizeassignments"));
+
+        gridLayout_2->addWidget(finalizeassignments, 2, 0, 1, 1);
+
+        Assignemtnumlabel = new QLabel(layoutWidget2);
+        Assignemtnumlabel->setObjectName(QStringLiteral("Assignemtnumlabel"));
+
+        gridLayout_2->addWidget(Assignemtnumlabel, 1, 0, 1, 1);
+
+        Assignmentspinbox = new QSpinBox(layoutWidget2);
+        Assignmentspinbox->setObjectName(QStringLiteral("Assignmentspinbox"));
+
+        gridLayout_2->addWidget(Assignmentspinbox, 1, 1, 2, 1);
+
+        AssignmentLabel = new QLabel(layoutWidget2);
+        AssignmentLabel->setObjectName(QStringLiteral("AssignmentLabel"));
+
+        gridLayout_2->addWidget(AssignmentLabel, 0, 0, 1, 1);
+
+        Assignmentweightlabel = new QLabel(layoutWidget2);
+        Assignmentweightlabel->setObjectName(QStringLiteral("Assignmentweightlabel"));
+
+        gridLayout_2->addWidget(Assignmentweightlabel, 3, 0, 1, 2);
+
+        label_3 = new QLabel(layoutWidget2);
+        label_3->setObjectName(QStringLiteral("label_3"));
+
+        gridLayout_2->addWidget(label_3, 5, 1, 1, 1);
+
+        lineEdit_2 = new QLineEdit(layoutWidget2);
+        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+
+        gridLayout_2->addWidget(lineEdit_2, 5, 0, 1, 1);
+
         widget = new QWidget(centralWidget);
         widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(450, 380, 271, 211));
+        widget->setGeometry(QRect(480, 250, 251, 351));
         gridLayout_3 = new QGridLayout(widget);
         gridLayout_3->setSpacing(6);
         gridLayout_3->setContentsMargins(11, 11, 11, 11);
         gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
         gridLayout_3->setContentsMargins(0, 0, 0, 0);
+        label_5 = new QLabel(widget);
+        label_5->setObjectName(QStringLiteral("label_5"));
+
+        gridLayout_3->addWidget(label_5, 3, 1, 1, 1);
+
+        Finalscorelabel = new QLabel(widget);
+        Finalscorelabel->setObjectName(QStringLiteral("Finalscorelabel"));
+
+        gridLayout_3->addWidget(Finalscorelabel, 4, 0, 1, 1);
+
         Finallabel = new QLabel(widget);
         Finallabel->setObjectName(QStringLiteral("Finallabel"));
 
@@ -129,124 +239,192 @@ public:
 
         gridLayout_3->addWidget(Finalweightlabel, 1, 0, 1, 1);
 
-        line_weightFinal = new QLineEdit(widget);
-        line_weightFinal->setObjectName(QStringLiteral("line_weightFinal"));
-
-        gridLayout_3->addWidget(line_weightFinal, 2, 0, 1, 1);
-
-        Finalscorelabel = new QLabel(widget);
-        Finalscorelabel->setObjectName(QStringLiteral("Finalscorelabel"));
-
-        gridLayout_3->addWidget(Finalscorelabel, 3, 0, 1, 1);
-
         line_gradescore = new QLineEdit(widget);
         line_gradescore->setObjectName(QStringLiteral("line_gradescore"));
 
-        gridLayout_3->addWidget(line_gradescore, 4, 0, 1, 1);
+        gridLayout_3->addWidget(line_gradescore, 5, 0, 1, 1);
 
         calculate = new QPushButton(widget);
         calculate->setObjectName(QStringLiteral("calculate"));
 
-        gridLayout_3->addWidget(calculate, 5, 0, 1, 1);
+        gridLayout_3->addWidget(calculate, 6, 0, 1, 1);
+
+        lineEdit = new QLineEdit(widget);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+
+        gridLayout_3->addWidget(lineEdit, 3, 0, 1, 1);
 
         widget1 = new QWidget(centralWidget);
         widget1->setObjectName(QStringLiteral("widget1"));
-        widget1->setGeometry(QRect(320, 0, 401, 71));
-        horizontalLayout = new QHBoxLayout(widget1);
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        OverallFinallabel = new QLabel(widget1);
-        OverallFinallabel->setObjectName(QStringLiteral("OverallFinallabel"));
+        widget1->setGeometry(QRect(250, 240, 221, 221));
+        gridLayout_4 = new QGridLayout(widget1);
+        gridLayout_4->setSpacing(6);
+        gridLayout_4->setContentsMargins(11, 11, 11, 11);
+        gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
+        gridLayout_4->setContentsMargins(0, 0, 0, 0);
+        label_15 = new QLabel(widget1);
+        label_15->setObjectName(QStringLiteral("label_15"));
 
-        horizontalLayout->addWidget(OverallFinallabel);
+        gridLayout_4->addWidget(label_15, 2, 0, 1, 1);
 
-        Outputlabel = new QLabel(widget1);
-        Outputlabel->setObjectName(QStringLiteral("Outputlabel"));
+        label = new QLabel(widget1);
+        label->setObjectName(QStringLiteral("label"));
 
-        horizontalLayout->addWidget(Outputlabel);
+        gridLayout_4->addWidget(label, 0, 0, 1, 1);
+
+        lineEdit_5 = new QLineEdit(widget1);
+        lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
+
+        gridLayout_4->addWidget(lineEdit_5, 1, 1, 1, 1);
+
+        label_13 = new QLabel(widget1);
+        label_13->setObjectName(QStringLiteral("label_13"));
+
+        gridLayout_4->addWidget(label_13, 1, 0, 1, 1);
+
+        label_12 = new QLabel(widget1);
+        label_12->setObjectName(QStringLiteral("label_12"));
+
+        gridLayout_4->addWidget(label_12, 3, 0, 1, 1);
+
+        lineEdit_6 = new QLineEdit(widget1);
+        lineEdit_6->setObjectName(QStringLiteral("lineEdit_6"));
+
+        gridLayout_4->addWidget(lineEdit_6, 2, 1, 1, 1);
+
+        lineEdit_7 = new QLineEdit(widget1);
+        lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
+
+        gridLayout_4->addWidget(lineEdit_7, 3, 1, 1, 1);
 
         widget2 = new QWidget(centralWidget);
         widget2->setObjectName(QStringLiteral("widget2"));
-        widget2->setGeometry(QRect(360, 70, 371, 171));
-        gridLayout = new QGridLayout(widget2);
-        gridLayout->setSpacing(6);
-        gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        gridLayout->setContentsMargins(0, 0, 0, 0);
-        Midtermlabel = new QLabel(widget2);
-        Midtermlabel->setObjectName(QStringLiteral("Midtermlabel"));
+        widget2->setGeometry(QRect(10, 240, 241, 411));
+        gridLayout_6 = new QGridLayout(widget2);
+        gridLayout_6->setSpacing(6);
+        gridLayout_6->setContentsMargins(11, 11, 11, 11);
+        gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
+        gridLayout_6->setContentsMargins(0, 0, 0, 0);
+        label_2 = new QLabel(widget2);
+        label_2->setObjectName(QStringLiteral("label_2"));
 
-        gridLayout->addWidget(Midtermlabel, 0, 0, 1, 1);
+        gridLayout_6->addWidget(label_2, 0, 0, 1, 1);
 
-        Midtermspinbox = new QSpinBox(widget2);
-        Midtermspinbox->setObjectName(QStringLiteral("Midtermspinbox"));
+        gridLayout_5 = new QGridLayout();
+        gridLayout_5->setSpacing(6);
+        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
+        label_6 = new QLabel(widget2);
+        label_6->setObjectName(QStringLiteral("label_6"));
 
-        gridLayout->addWidget(Midtermspinbox, 1, 1, 2, 1);
+        gridLayout_5->addWidget(label_6, 0, 0, 1, 1);
 
-        line_weightMidterms = new QLineEdit(widget2);
-        line_weightMidterms->setObjectName(QStringLiteral("line_weightMidterms"));
+        lineEdit_4 = new QLineEdit(widget2);
+        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
 
-        gridLayout->addWidget(line_weightMidterms, 4, 0, 1, 2);
+        gridLayout_5->addWidget(lineEdit_4, 0, 1, 1, 1);
 
-        MidtermWeightlabel = new QLabel(widget2);
-        MidtermWeightlabel->setObjectName(QStringLiteral("MidtermWeightlabel"));
+        label_7 = new QLabel(widget2);
+        label_7->setObjectName(QStringLiteral("label_7"));
 
-        gridLayout->addWidget(MidtermWeightlabel, 3, 0, 1, 2);
+        gridLayout_5->addWidget(label_7, 1, 0, 1, 1);
 
-        Midtermnumlabel = new QLabel(widget2);
-        Midtermnumlabel->setObjectName(QStringLiteral("Midtermnumlabel"));
+        lineEdit_8 = new QLineEdit(widget2);
+        lineEdit_8->setObjectName(QStringLiteral("lineEdit_8"));
 
-        gridLayout->addWidget(Midtermnumlabel, 1, 0, 1, 1);
+        gridLayout_5->addWidget(lineEdit_8, 1, 1, 1, 1);
 
-        finalizemidterms = new QPushButton(widget2);
-        finalizemidterms->setObjectName(QStringLiteral("finalizemidterms"));
+        label_8 = new QLabel(widget2);
+        label_8->setObjectName(QStringLiteral("label_8"));
 
-        gridLayout->addWidget(finalizemidterms, 2, 0, 1, 1);
+        gridLayout_5->addWidget(label_8, 2, 0, 1, 1);
 
-        widget3 = new QWidget(centralWidget);
-        widget3->setObjectName(QStringLiteral("widget3"));
-        widget3->setGeometry(QRect(0, 70, 341, 171));
-        gridLayout_2 = new QGridLayout(widget3);
-        gridLayout_2->setSpacing(6);
-        gridLayout_2->setContentsMargins(11, 11, 11, 11);
-        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
-        gridLayout_2->setContentsMargins(0, 0, 0, 0);
-        AssignmentLabel = new QLabel(widget3);
-        AssignmentLabel->setObjectName(QStringLiteral("AssignmentLabel"));
+        lineEdit_9 = new QLineEdit(widget2);
+        lineEdit_9->setObjectName(QStringLiteral("lineEdit_9"));
 
-        gridLayout_2->addWidget(AssignmentLabel, 0, 0, 1, 1);
+        gridLayout_5->addWidget(lineEdit_9, 2, 1, 1, 1);
 
-        Assignemtnumlabel = new QLabel(widget3);
-        Assignemtnumlabel->setObjectName(QStringLiteral("Assignemtnumlabel"));
+        label_10 = new QLabel(widget2);
+        label_10->setObjectName(QStringLiteral("label_10"));
 
-        gridLayout_2->addWidget(Assignemtnumlabel, 1, 0, 1, 1);
+        gridLayout_5->addWidget(label_10, 3, 0, 1, 1);
 
-        Assignmentspinbox = new QSpinBox(widget3);
-        Assignmentspinbox->setObjectName(QStringLiteral("Assignmentspinbox"));
+        lineEdit_10 = new QLineEdit(widget2);
+        lineEdit_10->setObjectName(QStringLiteral("lineEdit_10"));
 
-        gridLayout_2->addWidget(Assignmentspinbox, 1, 1, 2, 1);
+        gridLayout_5->addWidget(lineEdit_10, 3, 1, 1, 1);
 
-        Assignmentweightlabel = new QLabel(widget3);
-        Assignmentweightlabel->setObjectName(QStringLiteral("Assignmentweightlabel"));
+        lineEdit_11 = new QLineEdit(widget2);
+        lineEdit_11->setObjectName(QStringLiteral("lineEdit_11"));
 
-        gridLayout_2->addWidget(Assignmentweightlabel, 3, 0, 1, 2);
+        gridLayout_5->addWidget(lineEdit_11, 4, 1, 1, 1);
 
-        line_weightassignments = new QLineEdit(widget3);
-        line_weightassignments->setObjectName(QStringLiteral("line_weightassignments"));
+        label_11 = new QLabel(widget2);
+        label_11->setObjectName(QStringLiteral("label_11"));
 
-        gridLayout_2->addWidget(line_weightassignments, 4, 0, 1, 2);
+        gridLayout_5->addWidget(label_11, 5, 0, 1, 1);
 
-        finalizemidterms_2 = new QPushButton(widget3);
-        finalizemidterms_2->setObjectName(QStringLiteral("finalizemidterms_2"));
+        lineEdit_13 = new QLineEdit(widget2);
+        lineEdit_13->setObjectName(QStringLiteral("lineEdit_13"));
 
-        gridLayout_2->addWidget(finalizemidterms_2, 2, 0, 1, 1);
+        gridLayout_5->addWidget(lineEdit_13, 6, 1, 1, 1);
+
+        label_9 = new QLabel(widget2);
+        label_9->setObjectName(QStringLiteral("label_9"));
+
+        gridLayout_5->addWidget(label_9, 7, 0, 1, 1);
+
+        lineEdit_12 = new QLineEdit(widget2);
+        lineEdit_12->setObjectName(QStringLiteral("lineEdit_12"));
+
+        gridLayout_5->addWidget(lineEdit_12, 8, 1, 1, 1);
+
+        lineEdit_14 = new QLineEdit(widget2);
+        lineEdit_14->setObjectName(QStringLiteral("lineEdit_14"));
+
+        gridLayout_5->addWidget(lineEdit_14, 9, 1, 1, 1);
+
+        lineEdit_15 = new QLineEdit(widget2);
+        lineEdit_15->setObjectName(QStringLiteral("lineEdit_15"));
+
+        gridLayout_5->addWidget(lineEdit_15, 5, 1, 1, 1);
+
+        lineEdit_16 = new QLineEdit(widget2);
+        lineEdit_16->setObjectName(QStringLiteral("lineEdit_16"));
+
+        gridLayout_5->addWidget(lineEdit_16, 7, 1, 1, 1);
+
+        label_16 = new QLabel(widget2);
+        label_16->setObjectName(QStringLiteral("label_16"));
+
+        gridLayout_5->addWidget(label_16, 4, 0, 1, 1);
+
+        label_14 = new QLabel(widget2);
+        label_14->setObjectName(QStringLiteral("label_14"));
+
+        gridLayout_5->addWidget(label_14, 6, 0, 1, 1);
+
+        label_17 = new QLabel(widget2);
+        label_17->setObjectName(QStringLiteral("label_17"));
+
+        gridLayout_5->addWidget(label_17, 8, 0, 1, 1);
+
+        label_18 = new QLabel(widget2);
+        label_18->setObjectName(QStringLiteral("label_18"));
+
+        gridLayout_5->addWidget(label_18, 9, 0, 1, 1);
+
+
+        gridLayout_6->addLayout(gridLayout_5, 1, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
+        QWidget::setTabOrder(finalizeassignments, Midtermspinbox);
+        QWidget::setTabOrder(Midtermspinbox, line_gradescore);
+        QWidget::setTabOrder(line_gradescore, calculate);
+        QWidget::setTabOrder(calculate, finalizemidterms);
+        QWidget::setTabOrder(finalizemidterms, Assignmentspinbox);
 
         retranslateUi(MainWindow);
 
@@ -257,26 +435,39 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         Header->setText(QApplication::translate("MainWindow", "Grade Calulator", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "Assignments:", nullptr));
-        label->setText(QApplication::translate("MainWindow", "Midterms:", nullptr));
-        Finallabel->setText(QApplication::translate("MainWindow", "Final exam", nullptr));
-        Finalweightlabel->setText(QApplication::translate("MainWindow", "Weighted percentage of Grade:", nullptr));
-        line_weightFinal->setText(QApplication::translate("MainWindow", "%", nullptr));
-        Finalscorelabel->setText(QApplication::translate("MainWindow", "Score:", nullptr));
-        line_gradescore->setText(QApplication::translate("MainWindow", "Grade", nullptr));
-        calculate->setText(QApplication::translate("MainWindow", "Calculate!", nullptr));
         OverallFinallabel->setText(QApplication::translate("MainWindow", "Final Grade:", nullptr));
         Outputlabel->setText(QApplication::translate("MainWindow", "Output Grade", nullptr));
-        Midtermlabel->setText(QApplication::translate("MainWindow", "Midterms", nullptr));
-        line_weightMidterms->setText(QApplication::translate("MainWindow", "%", nullptr));
-        MidtermWeightlabel->setText(QApplication::translate("MainWindow", "Weighted percentage of Grade:", nullptr));
         Midtermnumlabel->setText(QApplication::translate("MainWindow", "Number of Midterms:", nullptr));
+        Midtermlabel->setText(QApplication::translate("MainWindow", "Midterms", nullptr));
+        MidtermWeightlabel->setText(QApplication::translate("MainWindow", "Weighted percentage of Grade:", nullptr));
         finalizemidterms->setText(QApplication::translate("MainWindow", "Add Midterms", nullptr));
-        AssignmentLabel->setText(QApplication::translate("MainWindow", "Assignments", nullptr));
+        label_4->setText(QApplication::translate("MainWindow", "%", nullptr));
+        finalizeassignments->setText(QApplication::translate("MainWindow", "Add Assignments", nullptr));
         Assignemtnumlabel->setText(QApplication::translate("MainWindow", "Number of Assignments:", nullptr));
+        AssignmentLabel->setText(QApplication::translate("MainWindow", "Assignments", nullptr));
         Assignmentweightlabel->setText(QApplication::translate("MainWindow", "Weighted percentage of Grade:", nullptr));
-        line_weightassignments->setText(QApplication::translate("MainWindow", "%", nullptr));
-        finalizemidterms_2->setText(QApplication::translate("MainWindow", "Add Assignments", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "%", nullptr));
+        label_5->setText(QApplication::translate("MainWindow", "%", nullptr));
+        Finalscorelabel->setText(QApplication::translate("MainWindow", "Score:", nullptr));
+        Finallabel->setText(QApplication::translate("MainWindow", "Final exam", nullptr));
+        Finalweightlabel->setText(QApplication::translate("MainWindow", "Weighted percentage of Grade:", nullptr));
+        line_gradescore->setText(QString());
+        calculate->setText(QApplication::translate("MainWindow", "Calculate overall!", nullptr));
+        label_15->setText(QApplication::translate("MainWindow", "Midterm 2", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Midterms:", nullptr));
+        label_13->setText(QApplication::translate("MainWindow", "Midterm 1", nullptr));
+        label_12->setText(QApplication::translate("MainWindow", "Midterm 3", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "Assignments:", nullptr));
+        label_6->setText(QApplication::translate("MainWindow", "Assignment 1", nullptr));
+        label_7->setText(QApplication::translate("MainWindow", "Assignment 2", nullptr));
+        label_8->setText(QApplication::translate("MainWindow", "Assignment 3", nullptr));
+        label_10->setText(QApplication::translate("MainWindow", "Assignment 4", nullptr));
+        label_11->setText(QApplication::translate("MainWindow", "Assignment 6", nullptr));
+        label_9->setText(QApplication::translate("MainWindow", "Assignment 8", nullptr));
+        label_16->setText(QApplication::translate("MainWindow", "Assingment 5", nullptr));
+        label_14->setText(QApplication::translate("MainWindow", "Assignment 7", nullptr));
+        label_17->setText(QApplication::translate("MainWindow", "Assignment 9", nullptr));
+        label_18->setText(QApplication::translate("MainWindow", "Assignment 10", nullptr));
     } // retranslateUi
 
 };

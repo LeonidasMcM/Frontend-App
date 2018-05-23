@@ -15,6 +15,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+
+    void on_finalizemidterms_2_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
